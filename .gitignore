@@ -39,4 +39,7 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignorar arquivos .properties
+# Ignorar arquivos .properties e .yaml/.yml
+*.properties
+*.yml
+*.yaml
