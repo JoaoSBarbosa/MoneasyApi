@@ -1,7 +1,7 @@
 package com.joaobarbosa.dev.moneasy_api.core.domain;
 
 import com.joaobarbosa.dev.moneasy_api.core.abstractions.Auditable;
-import com.joaobarbosa.dev.moneasy_api.core.enums.TransactionType;
+import com.joaobarbosa.dev.moneasy_api.core.enums.TypeEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,8 +29,10 @@ public class Transaction extends Auditable {
     private BigDecimal value;
     @Column(name = "data_hora")
     private LocalDateTime date;
+
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo")
-    private TransactionType type;
+    private TypeEnum type;
 
     @JoinColumn(name = "usuario_id")
     @ManyToOne(fetch = FetchType.LAZY)

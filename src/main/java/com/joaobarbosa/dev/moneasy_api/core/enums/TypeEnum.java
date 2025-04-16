@@ -1,22 +1,21 @@
 package com.joaobarbosa.dev.moneasy_api.core.enums;
 
-public enum TransactionType {
+import lombok.Getter;
+
+@Getter
+public enum TypeEnum {
 
     RECEITA("Receita"),
     DESPESA("Despesa");
 
     private final String description;
 
-    TransactionType(String description) {
+    TypeEnum(String description) {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public static TransactionType fromDescription(String description) {
-        for(TransactionType type: values()) {
+    public static TypeEnum fromDescription(String description) {
+        for(TypeEnum type: values()) {
             if(type.description.equals(description)) {
                 return type;
             }
