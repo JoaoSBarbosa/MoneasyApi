@@ -1,0 +1,1 @@
+CREATE TYPE typeenum AS ENUM ('RECEITA', 'DESPESA');
