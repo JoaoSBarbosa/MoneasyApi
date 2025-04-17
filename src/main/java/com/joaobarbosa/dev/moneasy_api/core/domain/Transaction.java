@@ -37,4 +37,8 @@ public class Transaction extends Auditable {
     @JoinColumn(name = "usuario_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
+
+    @JoinColumn(name = "categoria_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Category category;
 }
